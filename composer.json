@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\jnwebsi\\php-classes\\src"
+            "Jnwebsi\\": "vendor\\jnwebsi\\php-classes\\src"
         }
     }
 }
