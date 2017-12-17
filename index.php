@@ -2,18 +2,26 @@
 
 require_once("vendor/autoload.php");
 
-use \Slim\Slim;
-use \Jnwebsi\Page;
+use Slim\App;
+use Jnwebsi\Page;
+use Jnwebsi\PageAdmin;
 
-$app = new Slim();
+$app = new Slim\App();
 
-$app->config('debug', true);
-
-$app->get('/', function() {
+$app->get('/', function () {
 
 	$page = new Page();
+
 	$page->setTpl("index");
 
-});
+}); // ROTA INDEX
+
+$app->get('/admin', function () {
+
+	$page = new PageAdmin();
+
+	$page->setTpl("index");
+
+}); // ROTA ADMIN
 
 $app->run();
